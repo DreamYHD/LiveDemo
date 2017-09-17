@@ -29,12 +29,7 @@ public class PlayActivity extends AppCompatActivity {
     Button mAgainPlay;
     @BindView(R.id.jiasu)
     Button mJiasu;
-    @BindView(R.id.luzhi_live)
-    Button mLuzhiLive;
-    @BindView(R.id.stop_record)
-    Button mStopRecord;
-    @BindView(R.id.share)
-    Button mShare;
+
     private TXLivePlayer mLivePlayer;
     private String flvUrl;
     @Override

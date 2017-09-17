@@ -6,7 +6,6 @@ import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 public class RtmpUtils{
     private static final String KEY = "";
     private StringBuilder mStringBuilder = new StringBuilder();
@@ -45,7 +44,6 @@ public class RtmpUtils{
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
         return txSecret == null ? "" :
                 new StringBuilder().
                         append("rtmp://10305.livepush.myqcloud.com/live/10305_").
@@ -58,7 +56,6 @@ public class RtmpUtils{
                         append(Long.toHexString(date.getTime()/1000).toUpperCase()).
                         toString();
     }
-
     public static String byteArrayToHexString(byte[] data) {
         char[] out = new char[data.length << 1];
 
