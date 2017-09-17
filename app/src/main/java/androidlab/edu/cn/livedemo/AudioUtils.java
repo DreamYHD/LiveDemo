@@ -99,7 +99,7 @@ public class AudioUtils {
             mTts=SpeechSynthesizer.createSynthesizer(context, Listener);
             mTts.setParameter(SpeechConstant.VOICE_NAME,voicer);
             mTts.setParameter(SpeechConstant.SPEED,"50");
-            mTts.setParameter(SpeechConstant.VOLUME,"200");
+            mTts.setParameter(SpeechConstant.VOLUME,"500");
             mTts.setParameter(SpeechConstant.ENGINE_TYPE,SpeechConstant.TYPE_CLOUD);
         }else {
             mTts.startSpeaking(msg,  mSynthesizerListener);
