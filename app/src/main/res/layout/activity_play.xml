@@ -39,4 +39,12 @@
         android:id="@+id/jiasu"
         android:layout_width="100dp"
         android:layout_height="wrap_content"/>
+    <Button
+        android:text="查看回放"
+        android:layout_below="@+id/pause_stop"
+        android:id="@+id/see_back"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+
 </RelativeLayout>

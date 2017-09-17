@@ -22,4 +22,10 @@
         android:layout_width="368dp"
         android:layout_height="0dp"
         tools:layout_editor_absoluteX="8dp"/>
+   <Button
+       android:id="@+id/video"
+       android:text="播放语音"
+       app:layout_constraintTop_toBottomOf="@+id/see_btn"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 </android.support.constraint.ConstraintLayout>

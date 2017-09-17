@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Button mStartPushBtn;
     @BindView(R.id.see_btn)
     Button mSeeBtn;
+    @BindView(R.id.video)
+    Button mVideo;
     private AVUser mAVUser = new AVUser();
 
     @Override
@@ -40,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.CAMERA}, 100);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO,
+            }, 100);
         }
         if (null == AVUser.getCurrentUser()) {
             AVUser.logInInBackground("杨浩东", "478214", new LogInCallback<AVUser>() {
@@ -55,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             mAVUser = AVUser.getCurrentUser();
-            Log.i(TAG, "onCreate: "+mAVUser.getObjectId().toString());
+            Log.i(TAG, "onCreate: " + mAVUser.getObjectId().toString());
         }
     }
 
@@ -68,9 +74,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(mIntent);
                 break;
             case R.id.see_btn:
-                Intent mIntent2 = new Intent(this,PlayActivity.class);
+                Intent mIntent2 = new Intent(this, PlayActivity.class);
                 startActivity(mIntent2);
                 break;
         }
+    }
+    @OnClick(R.id.video)
+    public void onViewClicked() {
+        AudioUtils.getInstance().initmTts(this,"你好啊，我很你在师大的阿斯顿是爱的as好");
     }
 }

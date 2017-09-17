@@ -3,6 +3,8 @@ package androidlab.edu.cn.livedemo;
 import android.app.Application;
 
 import com.avos.avoscloud.AVOSCloud;
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 
 import java.util.AbstractCollection;
 
@@ -16,5 +18,6 @@ public class MyApp extends Application {
         super.onCreate();
         // 初始化参数依次为 this, AppId, AppKey
         AVOSCloud.initialize(this,"KElRaSz2NTiDTiMPpaHKKI4y-gzGzoHsz","EcQnyT6mczTqjcBtSXIKys3m");
+        SpeechUtility.createUtility(this, SpeechConstant.APPID +"=59be73f5");
     }
 }

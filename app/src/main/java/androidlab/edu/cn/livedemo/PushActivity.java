@@ -72,6 +72,7 @@ public class  PushActivity extends AppCompatActivity {
         setVideoQuality(mLivePusher, 1, true, true);
         //设置美颜
         setBeautiful(mLivePusher, 0, 1, 1, 1);
+
     }
 
     /**
@@ -93,6 +94,7 @@ public class  PushActivity extends AppCompatActivity {
      */
     private void setVideoQuality(TXLivePusher mLivePusher, int mI, boolean mB, boolean mB1) {
         mLivePusher.setVideoQuality(1, true, true);
+
     }
 
     @OnClick(R.id.stop_live)

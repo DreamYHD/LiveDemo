@@ -8,9 +8,6 @@ import android.widget.Button;
 import com.avos.avoscloud.AVUser;
 import com.tencent.rtmp.TXLivePlayer;
 import com.tencent.rtmp.ui.TXCloudVideoView;
-import com.tencent.ugc.TXRecordCommon;
-import com.tencent.ugc.TXUGCPublish;
-import com.tencent.ugc.TXUGCPublishTypeDef;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,17 +26,20 @@ public class PlayActivity extends AppCompatActivity {
     Button mAgainPlay;
     @BindView(R.id.jiasu)
     Button mJiasu;
+    @BindView(R.id.see_back)
+    Button mSeeBack;
 
     private TXLivePlayer mLivePlayer;
     private String flvUrl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
         ButterKnife.bind(this);
         init();
-
     }
+
     /*
        播放地址 (RTMP)：	rtmp://10305.liveplay.myqcloud.com/live/10305_d716621c0f
        播放地址 (FLV)：	http://10305.liveplay.myqcloud.com/live/10305_d716621c0f.flv
@@ -91,4 +91,7 @@ public class PlayActivity extends AppCompatActivity {
         mLivePlayer.startPlay(flvUrl, TXLivePlayer.PLAY_TYPE_LIVE_FLV);
     }
 
+    @OnClick(R.id.see_back)
+    public void onViewClicked() {
+    }
 }
