@@ -7,7 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class RtmpUtils{
-    private static final String KEY = "39a38ba5e27ed9a1805b3f0acbc6a795";
+    private static final String KEY = "";
     private StringBuilder mStringBuilder = new StringBuilder();
     public static void main(String[] args) {
         System.out.println(getSafeUrl("1111", "2017-09-16 23:59:59"));
